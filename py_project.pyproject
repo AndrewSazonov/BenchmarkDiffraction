@@ -1,0 +1,8 @@
+{
+"files": [
+      "main.py",
+      "main.qml",
+      "CrysPy/_SrTiO3.rcif",
+      "CrysPy/_PbSO4.rcif"
+    ]
+}
