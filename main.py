@@ -1,5 +1,6 @@
 import sys, os
 import timeit
+import copy
 import numpy as np
 import scipy as sc
 import lmfit
@@ -12,14 +13,17 @@ from PySide6.QtGui import QSurfaceFormat
 from PySide6.QtQuick3D import QQuick3D
 from PySide6 import QtCharts
 
-import CFML_api.powder_mod
+from pycrysfml import cfml_utilities
 import cryspy
 from cryspy.procedure_rhochi.rhochi_by_dictionary import \
     rhochi_calc_chi_sq_by_dictionary
 
 
+
+DEFAULT_CALCULATOR = 'cryspy'  # 'cryspy' or 'crysfml'
+#DEFAULT_CALCULATOR = 'crysfml'  # 'cryspy' or 'crysfml'
+RCIF_FILE_NAME = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'examples', 'La0.5Ba0.5CoO3.rcif')
 DTYPE = np.float64
-RCIF_FILE_NAME = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'examples', 'PbSO4.rcif')
 
 
 class Proxy(QObject):
@@ -32,7 +36,7 @@ class Proxy(QObject):
     wavelengthChanged = Signal(bool)
     resolutionXChanged = Signal(bool)
 
-    meas2thetaOffsetChanged = Signal(bool)
+    tthetaOffsetChanged = Signal(bool)
     scaleChanged = Signal(bool)
 
     stepChanged = Signal(bool)
@@ -43,29 +47,26 @@ class Proxy(QObject):
     def __init__(self, parent=None):
         super(Proxy, self).__init__(parent)
 
-        # CrysPy objects
+        # CrysPy
+
         self._cryspyObj = cryspy.load_file(RCIF_FILE_NAME)
         self._cryspyDict = self._cryspyObj.get_dictionary()
         self._cryspyInOutDict = {}
 
-        # EasyDiffraction objects
+        # EasyDiffraction
+
         self._edDict = self.createEdDict(self._cryspyObj, self._cryspyDict)
 
-        # CrysFML objects
-        self._crysfmlDict = self._edDict.copy()
+        self._first_exp_name = list(self._edDict['experiments'][0].keys())[0]
 
-        # Misc
-        self._first_experiment_name = list(self._edDict['experiments'][0].keys())[0]
+        self._wavelength = self._edDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_wavelength']
+        self._resolutionX = self._edDict['experiments'][0][self._first_exp_name]['_pd_instr_resolution_x']
+        self._step = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_inc']
+        self._radiationProbe = self._edDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_probe']
+        self._tthetaOffset = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_offset']
+        self._scale = self._edDict['experiments'][0][self._first_exp_name]['_phase'][0]['_scale']
 
-        self._wavelength = self._edDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_wavelength']
-        self._resolutionX = self._edDict['experiments'][0][self._first_experiment_name]['_pd_instr_resolution_x']
-        self._step = self._edDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_range_inc']
-        self._radiationProbe = self._edDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_probe']
-
-        self._meas2thetaOffset = self._edDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_offset']
-        self._scale = self._edDict['experiments'][0][self._first_experiment_name]['_phase'][0]['_scale']
-
-        self._calculator = 'cryspy'
+        self._calculator = DEFAULT_CALCULATOR
 
         self._arraySize = 0
         self._axisRanges = {'xMin': 0, 'xMax': 1, 'yMin': 0, 'yMax': 1}
@@ -75,25 +76,34 @@ class Proxy(QObject):
 
         self._time = {"calculate": 0, "process": 0, "replace": 0}
 
-        self._xMin = self._edDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_range_min']
-        self._xMax = self._edDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_range_max']
-        self._xInc = self._edDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_range_inc']
+        self._xMin = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_min']
+        self._xMax = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_max']
+        self._xInc = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_inc']
 
         rhochi_calc_chi_sq_by_dictionary(self._cryspyDict, dict_in_out=self._cryspyInOutDict)
+
         self._xArray = np.arange(self._xMin, self._xMax + self._xInc, self._xInc, dtype=DTYPE)  # -> _xArrayMeasured?
-        self._yArrayMeasured = self._cryspyInOutDict[f'pd_{self._first_experiment_name}']['signal_exp'][0]
-        self._yArrayMeasuredSigma = self._cryspyInOutDict[f'pd_{self._first_experiment_name}']['signal_exp'][1]
+        self._yArrayMeasured = self._cryspyInOutDict[f'pd_{self._first_exp_name}']['signal_exp'][0]
+        self._yArrayMeasuredSigma = self._cryspyInOutDict[f'pd_{self._first_exp_name}']['signal_exp'][1]
         self._yArray = np.empty_like(self._xArray)  # -> yArrayCalculated?
         self._xArrayProcessed = np.empty_like(self._xArray)
         self._yArrayProcessed = np.empty_like(self._xArray)
         self._yArrayResid = np.empty_like(self._xArray)
+
+        # CrysFML
+
+        self._crysfmlDict = copy.deepcopy(self._edDict)
+        self.fixCrysfmlDictAtomOccupancies()
+        ####?self.fixCrysfmlOffset()
+
+        # Connections
 
         self.wavelengthChanged.connect(self.updateDictData)
         self.resolutionXChanged.connect(self.updateDictData)
         self.stepChanged.connect(self.updateDictData)
         self.radiationProbeChanged.connect(self.updateDictData)
         self.scaleChanged.connect(self.updateDictData)
-        self.meas2thetaOffsetChanged.connect(self.updateDictData)
+        self.tthetaOffsetChanged.connect(self.updateDictData)
 
         self.dictDataChanged.connect(self.updateChart)
         self.calculatorChanged.connect(self.updateChart)
@@ -113,6 +123,7 @@ class Proxy(QObject):
                     # Space group section
                     if type(item) == cryspy.C_item_loop_classes.cl_2_space_group.SpaceGroup:
                         ed_phase[data_block_name]['_space_group_name_H-M_alt'] = item.name_hm_alt
+                        ed_phase[data_block_name]['_space_group_general_multiplicity'] = item.space_group_wyckoff.items[0].multiplicity
                     # Cell section
                     elif type(item) == cryspy.C_item_loop_classes.cl_1_cell.Cell:
                         ed_phase[data_block_name]['_cell_length_a'] = item.length_a
@@ -140,7 +151,7 @@ class Proxy(QObject):
                             ed_atoms.append(ed_atom)
                         ed_phase[data_block_name]['_atom_site'] = ed_atoms
                 ed_dict['phases'].append(ed_phase)
-                # Experiment datablock
+            # Experiment datablock
             if data_block_name in experiment_names:
                 ed_dict['experiments'] = []
                 ed_experiment = {data_block_name: {}}
@@ -266,17 +277,17 @@ class Proxy(QObject):
         calculateProfile = False
         self.scaleChanged.emit(calculateProfile)
 
-    @Property(float, notify=meas2thetaOffsetChanged)
-    def meas2thetaOffset(self):
-        return self._meas2thetaOffset
+    @Property(float, notify=tthetaOffsetChanged)
+    def tthetaOffset(self):
+        return self._tthetaOffset
 
-    @meas2thetaOffset.setter
-    def meas2thetaOffset(self, new_value):
-        if self._meas2thetaOffset == new_value:
+    @tthetaOffset.setter
+    def tthetaOffset(self, new_value):
+        if self._tthetaOffset == new_value:
             return
-        self._meas2thetaOffset = new_value
+        self._tthetaOffset = new_value
         calculateProfile = False
-        self.meas2thetaOffsetChanged.emit(calculateProfile)
+        self.tthetaOffsetChanged.emit(calculateProfile)
 
     @Property(float, notify=stepChanged)
     def step(self):
@@ -303,24 +314,24 @@ class Proxy(QObject):
         self.resolutionXChanged.emit(calculateProfile)
 
     def updateDictData(self, calculateProfile):
-        self._edDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_wavelength'] = self._wavelength
-        self._edDict['experiments'][0][self._first_experiment_name]['_pd_instr_resolution_x'] = self._resolutionX
-        self._edDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_range_inc'] = self._step
-        self._edDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_probe'] = self._radiationProbe
+        self._edDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_wavelength'] = self._wavelength
+        self._edDict['experiments'][0][self._first_exp_name]['_pd_instr_resolution_x'] = self._resolutionX
+        self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_inc'] = self._step
+        self._edDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_probe'] = self._radiationProbe
 
-        self._edDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_offset'] = self._meas2thetaOffset
-        self._edDict['experiments'][0][self._first_experiment_name]['_phase'][0]['_scale'] = self._scale
+        self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_offset'] = self._tthetaOffset
+        self._edDict['experiments'][0][self._first_exp_name]['_phase'][0]['_scale'] = self._scale
 
         if self._calculator == 'crysfml':
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_wavelength'] = self._wavelength
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_pd_instr_resolution_x'] = self._resolutionX
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_pd_meas_2theta_range_inc'] = self._step
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_probe'] = self._radiationProbe
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_wavelength'] = self._wavelength
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_instr_resolution_x'] = self._resolutionX
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_inc'] = self._step
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_probe'] = self._radiationProbe
 
         elif self._calculator == 'cryspy':
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['wavelength'][0] = self._wavelength
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['resolution_parameters'][3] = self._resolutionX
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['radiation'][0] = self._radiationProbe.replace('neutron', 'neutrons').replace('x-ray', 'X-rays')
+            self._cryspyDict[f'pd_{self._first_exp_name}']['wavelength'][0] = self._wavelength
+            self._cryspyDict[f'pd_{self._first_exp_name}']['resolution_parameters'][3] = self._resolutionX
+            self._cryspyDict[f'pd_{self._first_exp_name}']['radiation'][0] = self._radiationProbe.replace('neutron', 'neutrons').replace('x-ray', 'X-rays')
 
         self.dictDataChanged.emit(calculateProfile)
 
@@ -376,36 +387,55 @@ class Proxy(QObject):
     def timing(self, f):
         return timeit.timeit(stmt=f, number=1)
 
+    def fixCrysfmlDictAtomOccupancies(self):
+        first_phase_name = list(self._crysfmlDict['phases'][0].keys())[0]
+        general_multiplicity = self._crysfmlDict['phases'][0][first_phase_name]['_space_group_general_multiplicity']
+        atom_sites = self._crysfmlDict['phases'][0][first_phase_name]['_atom_site']
+        for idx, atom_site in enumerate(atom_sites):
+            atom_sites[idx]['_occupancy'] = atom_site['_occupancy'] * atom_site['_multiplicity'] / general_multiplicity
+
+    def fixCrysfmlOffset(self):
+        cryspyOffset = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_offset']
+        self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_offset'] = -cryspyOffset
+
     def calculateDiffractionPattern(self):
         if self._calculator == 'crysfml':
-            self._yArray = CFML_api.powder_mod.simulation(self._crysfmlDict)[0].astype(np.float64)
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_min'] = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_min'] - self._tthetaOffset
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_max'] = self._edDict['experiments'][0][self._first_exp_name]['_pd_meas_2theta_range_max'] - self._tthetaOffset + self._step
+            self._yArray = cfml_utilities.powder_pattern_from_json(self._crysfmlDict)[1].astype(np.float64)
         elif self._calculator == 'cryspy':
             rhochi_calc_chi_sq_by_dictionary(self._cryspyDict,
                                              dict_in_out=self._cryspyInOutDict,
                                              flag_use_precalculated_data=False,
                                              flag_calc_analytical_derivatives=False)
-            self._yArray = self._cryspyInOutDict[f'pd_{self._first_experiment_name}']['signal_plus']
+            self._yArray = self._cryspyInOutDict[f'pd_{self._first_exp_name}']['signal_plus']
         self.arraySize = int(self._xArray.size)
 
     def processDiffractionPattern(self):
         # params
         scale = DTYPE(self._scale)
-        offset = DTYPE(self._meas2thetaOffset)
+        offset = DTYPE(self._tthetaOffset)
         # processed x-array
-        self._xArrayProcessed = self._xArray + offset
+        #self._xArrayProcessed = self._xArray + offset
+        #print('====offset', offset)
+        self._xArrayProcessed = self._xArray
         # background y-array
-        background = self._edDict['experiments'][0][self._first_experiment_name]['_pd_background']
+        background = self._edDict['experiments'][0][self._first_exp_name]['_pd_background']
         xp = np.array([item['_2theta'] for item in background], dtype=DTYPE)
         fp = np.array([item['_intensity'] for item in background], dtype=DTYPE)
         backgroundYArray = np.interp(self._xArrayProcessed, xp, fp)
         # processed y-array
-        multiplier = scale * DTYPE(100.0) / self._yArray.max()
+        multiplier = 1.0
+        if self._yArray.max() > 0:
+            multiplier = scale * DTYPE(100.0) / self._yArray.max()
+        #print('-----', self._yArray.max())
+        #multiplier = scale
         self._yArrayProcessed = self._yArray * multiplier + backgroundYArray
         # residual y-array
         self._yArrayResid = self._yArrayMeasured - self._yArrayProcessed
 
     def replaceChartMeasData(self):
-        print('--------------- self._measSerie', self._measSerie)
+        #print('--------------- self._measSerie', self._measSerie)
         self._measSerie.replaceNp(self._xArray, self._yArrayMeasured)
         self.measSerieChanged.emit()
 
@@ -432,7 +462,7 @@ class Proxy(QObject):
 
     def processFuncScipy(self, params):
         self._scale = params[0]
-        print(f'scale: {self._scale}')
+        #print(f'scale: {self._scale}')
         self.processDiffractionPattern()
         return self.chisq_sum()
 
@@ -451,13 +481,13 @@ class Proxy(QObject):
     def calculateAndProcessFuncScipy(self, params, xArray, yArray):
         self._wavelength = params[0]
         self._resolutionX = params[1]
-        print(f'wavelength: {self._wavelength}, resolutionX: {self._resolutionX}')
+        #print(f'wavelength: {self._wavelength}, resolutionX: {self._resolutionX}')
         if self._calculator == 'crysfml':
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_wavelength'] = self._wavelength
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_pd_instr_resolution_x'] = self._resolutionX
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_wavelength'] = self._wavelength
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_instr_resolution_x'] = self._resolutionX
         elif self._calculator == 'cryspy':
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['wavelength'][0] = self._wavelength
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['resolution_parameters'][3] = self._resolutionX
+            self._cryspyDict[f'pd_{self._first_exp_name}']['wavelength'][0] = self._wavelength
+            self._cryspyDict[f'pd_{self._first_exp_name}']['resolution_parameters'][3] = self._resolutionX
         self.calculateDiffractionPattern()
         self.processDiffractionPattern()
         return self.chisq_array()
@@ -480,7 +510,7 @@ class Proxy(QObject):
 
     def processFuncLmfit(self, params):
         self._scale = params['scale'].value
-        print(f'scale: {self._scale}')
+        #print(f'scale: {self._scale}')
         self.processDiffractionPattern()
         return self.chisq_array()
 
@@ -499,13 +529,13 @@ class Proxy(QObject):
     def calculateAndProcessFuncLmfit(self, params):
         self._wavelength = params['wavelength'].value
         self._resolutionX = params['resolutionX'].value
-        print(f'wavelength: {self._wavelength}, resolutionX: {self._resolutionX}')
+        #print(f'wavelength: {self._wavelength}, resolutionX: {self._resolutionX}')
         if self._calculator == 'crysfml':
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_wavelength'] = self._wavelength
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_pd_instr_resolution_x'] = self._resolutionX
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_wavelength'] = self._wavelength
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_instr_resolution_x'] = self._resolutionX
         elif self._calculator == 'cryspy':
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['wavelength'][0] = self._wavelength
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['resolution_parameters'][3] = self._resolutionX
+            self._cryspyDict[f'pd_{self._first_exp_name}']['wavelength'][0] = self._wavelength
+            self._cryspyDict[f'pd_{self._first_exp_name}']['resolution_parameters'][3] = self._resolutionX
         self.calculateDiffractionPattern()
         self.processDiffractionPattern()
         return self.chisq_array()
@@ -529,7 +559,7 @@ class Proxy(QObject):
 
     def processFuncMinuit(self, scale):
         self._scale = scale
-        print(f'scale: {self._scale}')
+        #print(f'scale: {self._scale}')
         self.processDiffractionPattern()
         return self.chisq_sum()
 
@@ -553,13 +583,13 @@ class Proxy(QObject):
     def calculateAndProcessFuncMinuit(self, wavelength, resolutionX):
         self._wavelength = wavelength
         self._resolutionX = resolutionX
-        print(f'wavelength: {self._wavelength}, resolutionX: {self._resolutionX}')
+        #print(f'wavelength: {self._wavelength}, resolutionX: {self._resolutionX}')
         if self._calculator == 'crysfml':
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_diffrn_radiation_wavelength'] = self._wavelength
-            self._crysfmlDict['experiments'][0][self._first_experiment_name]['_pd_instr_resolution_x'] = self._resolutionX
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_diffrn_radiation_wavelength'] = self._wavelength
+            self._crysfmlDict['experiments'][0][self._first_exp_name]['_pd_instr_resolution_x'] = self._resolutionX
         elif self._calculator == 'cryspy':
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['wavelength'][0] = self._wavelength
-            self._cryspyDict[f'pd_{self._first_experiment_name}']['resolution_parameters'][3] = self._resolutionX
+            self._cryspyDict[f'pd_{self._first_exp_name}']['wavelength'][0] = self._wavelength
+            self._cryspyDict[f'pd_{self._first_exp_name}']['resolution_parameters'][3] = self._resolutionX
         self.calculateDiffractionPattern()
         self.processDiffractionPattern()
         return self.chisq_sum()

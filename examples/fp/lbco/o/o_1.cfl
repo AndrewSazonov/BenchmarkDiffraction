@@ -1,0 +1,15 @@
+!
+Title  CFL-file generated from FullProf for phase: cubic
+!
+Cell    3.89090  3.89090  3.89090  90.0000  90.0000  90.0000
+!
+SpGR  P m -3 m
+!
+!  Atom-strings in the order: Label, Species, x, y, z, Biso, Occ [,2*Spin, charge]
+Atom O    O      0.00000       0.50000       0.50000       1.40410       0.06250
+!
+!   Bond_STR instructions 
+DISTANCE 
+RESTRAINTS 
+DMAX   3.0000  3.0000
+TOL    0.0000

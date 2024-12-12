@@ -70,7 +70,7 @@ ApplicationWindow {
                 Component.onCompleted: {
 
                     proxy.measSerie = measSerie
-                    print('+++++++++++++++', measSerie, proxy.measSerie)
+                    //print('+++++++++++++++', measSerie, proxy.measSerie)
                     proxy.calcSerie = calcSerie
                     const calculateProfile = true
                     proxy.updateChart(calculateProfile)
@@ -249,8 +249,8 @@ ApplicationWindow {
                 }
                 Slider {
                     width: sliderWidth
-                    from: 1.89
-                    to: 1.93
+                    from: 1.48
+                    to: 1.51
                     value: proxy.wavelength
                     onMoved: {
                         if (useOpenGL) calcSerie.useOpenGL = true
@@ -260,7 +260,7 @@ ApplicationWindow {
                 }
             }
 
-            // _pd_instr_resolution_y
+            // _pd_instr_resolution_x
             Row {
                 spacing: margins
                 Label {
@@ -297,17 +297,17 @@ ApplicationWindow {
                 }
                 TextField {
                     width: editWidth
-                    text: proxy.meas2thetaOffset.toFixed(3)
-                    onEditingFinished: proxy.meas2thetaOffset = parseFloat(text)
+                    text: proxy.tthetaOffset.toFixed(3)
+                    onEditingFinished: proxy.tthetaOffset = parseFloat(text)
                 }
                 Slider {
                     width: sliderWidth
-                    from: -0.5
-                    to: 0.5
-                    value: proxy.meas2thetaOffset
+                    from: -1.0
+                    to: 1.0
+                    value: proxy.tthetaOffset
                     onMoved: {
                         if (useOpenGL) calcSerie.useOpenGL = true
-                        proxy.meas2thetaOffset = value
+                        proxy.tthetaOffset = value
                         if (useOpenGL) disableOpenGLTimer.restart()
                     }
                 }

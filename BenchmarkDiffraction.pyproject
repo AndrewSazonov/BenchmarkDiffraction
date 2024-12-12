@@ -1,0 +1,7 @@
+{
+"files": [
+      "main.py",
+      "main.qml",
+      "examples/La0.5Ba0.5CoO3.rcif"
+    ]
+}

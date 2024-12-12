@@ -1,0 +1,53 @@
+TITL  LBCO
+FILES => PCR-file : full
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 13:36:52.809                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.097599983   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62250   0.00000
+RFAR   5.680      7.221      6.362      1.289    
+RFAC   21.56      16.14      14.22      1.289        3091
+DEVA   3861.      1.248      1.559      1.888    
+RFBR   5.365      6.881      5.990      1.320    
+RFBC   15.84      13.58      11.82      1.320        2118
+DEVB   2674.      1.262      2.221      1.865    
+BRAG1    3.152    4.552      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------

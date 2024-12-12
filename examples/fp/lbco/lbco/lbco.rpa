@@ -1,0 +1,966 @@
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:48:00.478                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.50000   0.00000   0.00000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    0.100000001   0.000000000
+SHAP   0.00001  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.00000   0.00000
+RFAR   28.86      44.61      6.362      49.18    
+RFAC   109.6      99.73      14.22      49.18        3091
+DEVA  0.4615E+06  149.2     0.6063E-01  1.888    
+RFBR   38.31      52.94      5.861      81.58    
+RFBC   104.3      99.72      11.04      81.58        1842
+DEVB  0.4598E+06  249.4     0.6133E-01  1.855    
+BRAG1   97.686   83.125      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:48:29.459                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.50000   0.00000   0.00000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    0.100000001   0.000000000
+SHAP   0.00001  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.00000   0.00000
+RFAR   28.86      44.61      6.362      49.18    
+RFAC   109.6      99.73      14.22      49.18        3091
+DEVA  0.4615E+06  149.2     0.6063E-01  1.888    
+RFBR   38.31      52.94      5.861      81.58    
+RFBC   104.3      99.72      11.04      81.58        1842
+DEVB  0.4598E+06  249.4     0.6133E-01  1.855    
+BRAG1   97.686   83.125      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:48:52.984                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.50000   0.00000   0.00000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL  100.099998474   0.000000000
+SHAP   0.00001  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.00000   0.00000
+RFAR   319.1      1451.      6.362     0.5204E+05
+RFAC   1211.      3244.      14.22     0.5204E+05    3091
+DEVA  0.4169E+07  1348.     0.7445E-01  1.888    
+RFBR   454.2      1732.      5.861     0.8733E+05
+RFBC   1236.      3263.      11.04     0.8733E+05    1842
+DEVB  0.4167E+07  2261.     0.7445E-01  1.855    
+BRAG1 1195.688  324.391      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:49:09.816                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.50000   0.00000   0.00000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    2.828123331   0.108537689
+SHAP   0.00001  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62143   0.00702
+RFAR   24.75      38.32      6.360      36.30    
+RFAC   93.95      85.66      14.22      36.30        3089
+DEVA  0.1728E+06  55.88     0.8356E-01  1.890    
+RFBR   32.43      45.29      5.850      59.94    
+RFBC   88.05      85.50      11.04      59.94        1845
+DEVB  0.1712E+06  92.72     0.8474E-01  1.857    
+BRAG1   82.397   61.743      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:51:26.911                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    7.609243393   0.052872613
+SHAP   0.00001  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62457   0.00117
+RFAR   10.05      13.50      6.360      4.506    
+RFAC   38.14      30.18      14.22      4.506        3089
+DEVA  0.1592E+05  5.150     0.4966      1.890    
+RFBR   11.46      15.15      5.848      6.707    
+RFBC   31.10      28.58      11.04      6.707        1843
+DEVB  0.1436E+05  7.786     0.5592      1.857    
+BRAG1   12.105    8.529      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:52:08.318                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:52:22.532                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    8.345863342   0.033304717
+SHAP   0.00001  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.1258   0.0042  -0.1419   0.0094   0.1751   0.0042
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62212   0.00077
+RFAR   6.886      8.932      6.356      1.975    
+RFAC   26.14      19.97      14.21      1.975        3086
+DEVA   6240.      2.020      1.017      1.891    
+RFBR   6.924      9.083      6.044      2.259    
+RFBC   21.15      18.22      12.12      2.259        2231
+DEVB   5197.      2.328      1.230      1.873    
+BRAG1    5.436    5.639      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:52:26.090                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    8.345800400   0.033309553
+SHAP   0.00001  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.1258   0.0042  -0.1422   0.0094   0.1752   0.0042
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62209   0.00077
+RFAR   6.883      8.932      6.356      1.974    
+RFAC   26.13      19.97      14.21      1.974        3086
+DEVA   6241.      2.021      1.017      1.891    
+RFBR   6.922      9.084      6.043      2.259    
+RFBC   21.13      18.22      12.12      2.260        2230
+DEVB   5198.      2.329      1.229      1.873    
+BRAG1    5.423    5.635      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:53:09.112                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.109661102   0.027450060
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0847   0.0030  -0.1179   0.0067   0.1236   0.0030
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62280   0.00060
+RFAR   5.667      7.218      6.356      1.289    
+RFAC   21.51      16.13      14.21      1.289        3086
+DEVA   3853.      1.248      1.559      1.891    
+RFBR   5.358      6.883      5.991      1.320    
+RFBC   15.89      13.61      11.85      1.320        2129
+DEVB   2687.      1.261      2.208      1.870    
+BRAG1    3.116    4.558      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:53:29.799                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.137298584   0.032144815
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0830   0.0031  -0.1168   0.0067   0.1216   0.0033
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0830   0.0020
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62283   0.00060
+RFAR   5.667      7.218      6.355      1.290    
+RFAC   21.51      16.14      14.21      1.290        3085
+DEVA   3848.      1.246      1.563      1.892    
+RFBR   5.350      6.878      5.987      1.320    
+RFBC   15.84      13.59      11.83      1.320        2121
+DEVB   2669.      1.257      2.222      1.871    
+BRAG1    2.915    4.477      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:53:58.594                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.137118340   0.032157887
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0829   0.0031  -0.1168   0.0067   0.1215   0.0032
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0830   0.0020
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62284   0.00060
+RFAR   5.669      7.217      6.355      1.290    
+RFAC   21.52      16.13      14.21      1.290        3085
+DEVA   3847.      1.246      1.563      1.892    
+RFBR   5.353      6.878      5.982      1.322    
+RFBC   15.80      13.57      11.80      1.322        2112
+DEVB   2663.      1.260      2.228      1.871    
+BRAG1    2.909    4.452      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:56:14.234                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.109491348   0.027120216
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62283   0.00060
+RFAR   5.676      7.221      6.360      1.289    
+RFAC   21.55      16.14      14.22      1.289        3089
+DEVA   3859.      1.248      1.559      1.890    
+RFBR   5.360      6.880      5.988      1.320    
+RFBC   15.83      13.57      11.82      1.320        2117
+DEVB   2673.      1.261      2.222      1.867    
+BRAG1    3.046    4.506      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:56:52.980                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.097599983   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62250   0.00000
+RFAR   5.680      7.221      6.362      1.289    
+RFAC   21.56      16.14      14.22      1.289        3091
+DEVA   3861.      1.248      1.559      1.888    
+RFBR   5.365      6.881      5.990      1.320    
+RFBC   15.84      13.58      11.82      1.320        2118
+DEVB   2674.      1.262      2.221      1.865    
+BRAG1    3.152    4.552      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 11:57:05.624                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.097599983   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62250   0.00000
+RFAR   5.680      7.221      6.362      1.289    
+RFAC   21.56      16.14      14.22      1.289        3091
+DEVA   3861.      1.248      1.559      1.888    
+RFBR   5.365      6.881      5.990      1.320    
+RFBC   15.84      13.58      11.82      1.320        2118
+DEVB   2674.      1.262      2.221      1.865    
+BRAG1    3.152    4.552      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 12:00:52.109                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    3
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.097599983   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62250   0.00000
+RFAR   31.29      49.55      6.362      60.66    
+RFAC   118.8      110.8      14.22      60.66        3091
+DEVA  0.3084E+06  99.70     0.6256E-01  1.888    
+RFBR   38.71      56.19      5.990      87.97    
+RFBC   114.3      110.8      11.82      87.97        2118
+DEVB  0.3073E+06  144.9     0.6296E-01  1.865    
+BRAG1  108.920   76.284      58.905     100.000     197.154       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 12:01:40.275                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    1
+COND    0   0   0   0
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.097599983   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62250   0.00000
+RFAR   19.27      29.83      6.362      21.99    
+RFAC   73.14      66.69      14.22      21.99        3091
+DEVA  0.7849E+05  25.37     0.1192      1.888    
+RFBR   23.06      33.64      5.990      31.53    
+RFBC   68.07      66.36      11.82      31.53        2118
+DEVB  0.7730E+05  36.46     0.1213      1.865    
+BRAG1   61.590   43.359      58.905     100.000      47.998       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 13:18:44.007                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.097599983   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62250   0.00000
+RFAR   5.680      7.221      6.362      1.289    
+RFAC   21.56      16.14      14.22      1.289        3091
+DEVA   3861.      1.248      1.559      1.888    
+RFBR   5.365      6.881      5.990      1.320    
+RFBC   15.84      13.58      11.82      1.320        2118
+DEVB   2674.      1.262      2.221      1.865    
+BRAG1    3.152    4.552      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 13:18:59.442                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    9.097599983   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.62250   0.00000
+RFAR   5.680      7.221      6.362      1.289    
+RFAC   21.56      16.14      14.22      1.289        3091
+DEVA   3861.      1.248      1.559      1.888    
+RFBR   5.365      6.881      5.990      1.320    
+RFBC   15.84      13.58      11.82      1.320        2118
+DEVB   2674.      1.262      2.221      1.865    
+BRAG1    3.152    4.552      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------
+TITL  LBCO
+FILES => PCR-file : lbco
+FILES => DAT-files: lbco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+DATE & TIME     Date: 19/09/2024  Time: 13:36:40.195                              
+REM   NPHASE    IDUM   IASG    NRELL   ICRYG 
+GLB1     1       1       1       0       0
+REM   JOBTYP   NPROF  NBCKGD   NEXCRG   NSCAT   NORI
+GLB1     1       5      10       2       0       0
+REM    IWGT    ILOR   IRESO    ISTEP    IXUNIT  ICORR 
+GLB2     0       0       0       0       0       0
+REM   IOT   IPL   IPC   MAT   NXT  lst1  lst2  lst3  NLIN  PL_PRF
+OUT1    0     0     1     0     1     0     4     0     0     3
+REM   instr  JCIL  JSY  jlkh  jfou ISHOR ianaly
+OUT2   10     1     1    -2     0     0     0
+REM    MAT   NXT   NLIN  JCIL  JSY  ISHOR 
+OUT1    0     1     0     1     1     0
+REM    IOT   IPL   IPC  LST1  LST2  LST3  
+OUT2    0     0     1     0     4     0
+REM  PL_PRF INSTR  JLKH JFOU  IANALY
+OUT3    3    10    -2     0     0
+PHAS1 cubic                         
+SPGR P m -3 m            
+NATM    4
+COND    0   0   0   0
+ATOM La       0.00000   0.00000   0.00000   0.49580   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Ba       0.00000   0.00000   0.00000   0.49430   0.01042  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM Co       0.50000   0.50000   0.50000   0.25670   0.02083  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+ATOM O        0.00000   0.50000   0.50000   1.40410   0.06250  0  0    0
+SIGM        0.00000   0.00000   0.00000   0.00000   0.00000
+CELL    3.89090   3.89090   3.89090  90.00000  90.00000  90.00000
+SIGM    0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+NNVK     0
+SCAL    1.000000000   0.000000000
+SHAP   0.00000  0.00000
+BOVE    0.0000   0.0000
+HUVW    0.0834   0.0000  -0.1168   0.0000   0.1230   0.0000
+PREF    0.0000   0.0000   0.0000   0.0000
+ASYM    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+XYPA    0.0000   0.0000   0.0797   0.0000
+STRA    0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+SIZE    0.0000   0.0000   0.0000   0.0000
+ZERO    0.00000   0.00000
+RFAR   97.64      98.11      6.362      237.8    
+RFAC   97.64      98.11      6.362      237.8        3091
+DEVA  0.5745E+07  0.000     0.7444E-02  1.888    
+RFBR   96.92      97.54      5.998      264.5    
+RFBC   96.92      97.54      5.998      264.5        2121
+DEVB  0.5745E+07        NaN 0.9754E-02  1.865    
+BRAG1   96.038   83.288      58.905     100.000     245.167       1.000
+--------------------------------------------------------------------------------

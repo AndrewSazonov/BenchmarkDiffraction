@@ -1,0 +1,349 @@
+  LBCO
+
+            --------------------------------
+            SYMMETRY INFORMATION ON PHASE: 1
+            --------------------------------
+
+
+ => Symmetry information on space group: P m -3 m            
+ -> The multiplicity of the general position is:  48
+ -> The space group is Centric (-1 at origin)   
+ -> Lattice type  P: { 000 }                                       
+ -> Reduced set of symmetry operators:
+
+  No.  IT   Symmetry symbol    Rotation part     Associated Translation
+   1: ( 1)   1            -->     ( x, y, z) + {  0.0000  0.0000  0.0000}
+   2: ( 4)   2 ( x, 0, 0) -->     ( x,-y,-z) + {  0.0000  0.0000  0.0000}
+   3: ( 3)   2 ( 0, y, 0) -->     (-x, y,-z) + {  0.0000  0.0000  0.0000}
+   4: ( 2)   2 ( 0, 0, z) -->     (-x,-y, z) + {  0.0000  0.0000  0.0000}
+   5: ( 9)  3- ( x, x, x) -->     ( y, z, x) + {  0.0000  0.0000  0.0000}
+   6: (12)  3- (-x, x,-x) -->     (-y,-z, x) + {  0.0000  0.0000  0.0000}
+   7: (11)  3- (-x,-x, x) -->     ( y,-z,-x) + {  0.0000  0.0000  0.0000}
+   8: (10)  3- ( x,-x,-x) -->     (-y, z,-x) + {  0.0000  0.0000  0.0000}
+   9: ( 5)  3+ ( x, x, x) -->     ( z, x, y) + {  0.0000  0.0000  0.0000}
+  10: ( 8)  3+ (-x,-x, x) -->     (-z, x,-y) + {  0.0000  0.0000  0.0000}
+  11: ( 7)  3+ ( x,-x,-x) -->     (-z,-x, y) + {  0.0000  0.0000  0.0000}
+  12: ( 6)  3+ (-x, x,-x) -->     ( z,-x,-y) + {  0.0000  0.0000  0.0000}
+  13: (14)   2 ( x,-x, 0) -->     (-y,-x,-z) + {  0.0000  0.0000  0.0000}
+  14: (15)  4- ( 0, 0, z) -->     ( y,-x, z) + {  0.0000  0.0000  0.0000}
+  15: (16)  4+ ( 0, 0, z) -->     (-y, x, z) + {  0.0000  0.0000  0.0000}
+  16: (13)   2 ( x, x, 0) -->     ( y, x,-z) + {  0.0000  0.0000  0.0000}
+  17: (24)   2 (-x, 0, x) -->     (-z,-y,-x) + {  0.0000  0.0000  0.0000}
+  18: (21)  4+ ( 0, y, 0) -->     ( z, y,-x) + {  0.0000  0.0000  0.0000}
+  19: (22)   2 ( x, 0, x) -->     ( z,-y, x) + {  0.0000  0.0000  0.0000}
+  20: (23)  4- ( 0, y, 0) -->     (-z, y, x) + {  0.0000  0.0000  0.0000}
+  21: (19)   2 ( 0, y,-y) -->     (-x,-z,-y) + {  0.0000  0.0000  0.0000}
+  22: (18)   2 ( 0, y, y) -->     (-x, z, y) + {  0.0000  0.0000  0.0000}
+  23: (17)  4- ( x, 0, 0) -->     ( x, z,-y) + {  0.0000  0.0000  0.0000}
+  24: (20)  4+ ( x, 0, 0) -->     ( x,-z, y) + {  0.0000  0.0000  0.0000}
+
+
+        Information on Space Group: 
+        --------------------------- 
+
+ =>   Number of Space group: 221
+ =>  Hermann-Mauguin Symbol: P m -3 m
+ =>             Hall Symbol: -P 4 2 3
+ =>            Setting Type: IT (Generated from Hermann-Mauguin symbol)
+ =>          Crystal System: Cubic
+ =>              Laue Class: m-3m
+ =>             Point Group: m-3m
+ =>         Bravais Lattice: P
+ =>          Lattice Symbol: cP
+ =>  Reduced Number of S.O.:  24
+ =>    General multiplicity:  48
+ =>          Centrosymmetry: Centric (-1 at origin)
+ =>  Generators (exc. -1&L):   3
+ =>         Asymmetric unit:  0.000 <= x <=  0.500
+                              0.000 <= y <=  0.500
+                              0.000 <= z <=  0.500
+ => Centring vectors:  0
+                                                                                                    
+
+ => List of all Symmetry Operators and Symmetry Symbols
+
+ => SYMM(  1): x,y,z                             Symbol: 1
+ => SYMM(  2): x,-y,-z                           Symbol: 2 x,0,0
+ => SYMM(  3): -x,y,-z                           Symbol: 2 0,y,0
+ => SYMM(  4): -x,-y,z                           Symbol: 2 0,0,z
+ => SYMM(  5): y,z,x                             Symbol: 3- x,x,x
+ => SYMM(  6): -y,-z,x                           Symbol: 3+ x,-x,x
+ => SYMM(  7): y,-z,-x                           Symbol: 3+ x,x,-x
+ => SYMM(  8): -y,z,-x                           Symbol: 3- x,-x,-x
+ => SYMM(  9): z,x,y                             Symbol: 3+ x,x,x
+ => SYMM( 10): -z,x,-y                           Symbol: 3- x,x,-x
+ => SYMM( 11): -z,-x,y                           Symbol: 3+ x,-x,-x
+ => SYMM( 12): z,-x,-y                           Symbol: 3- x,-x,x
+ => SYMM( 13): y,x,z                             Symbol: m x,x,z
+ => SYMM( 14): -y,x,-z                           Symbol: -4- 0,0,z; 0,0,0
+ => SYMM( 15): y,-x,-z                           Symbol: -4+ 0,0,z; 0,0,0
+ => SYMM( 16): -y,-x,z                           Symbol: m x,-x,z
+ => SYMM( 17): z,y,x                             Symbol: m x,y,x
+ => SYMM( 18): -z,-y,x                           Symbol: -4+ 0,y,0; 0,0,0
+ => SYMM( 19): -z,y,-x                           Symbol: m x,y,-x
+ => SYMM( 20): z,-y,-x                           Symbol: -4- 0,y,0; 0,0,0
+ => SYMM( 21): x,z,y                             Symbol: m x,y,y
+ => SYMM( 22): x,-z,-y                           Symbol: m x,y,-y
+ => SYMM( 23): -x,-z,y                           Symbol: -4- x,0,0; 0,0,0
+ => SYMM( 24): -x,z,-y                           Symbol: -4+ x,0,0; 0,0,0
+ => SYMM( 25): -x,-y,-z                          Symbol: -1 0,0,0
+ => SYMM( 26): -x,y,z                            Symbol: m 0,y,z
+ => SYMM( 27): x,-y,z                            Symbol: m x,0,z
+ => SYMM( 28): x,y,-z                            Symbol: m x,y,0
+ => SYMM( 29): -y,-z,-x                          Symbol: -3- x,x,x; 0,0,0
+ => SYMM( 30): y,z,-x                            Symbol: -3+ x,-x,x; 0,0,0
+ => SYMM( 31): -y,z,x                            Symbol: -3+ x,x,-x; 0,0,0
+ => SYMM( 32): y,-z,x                            Symbol: -3- x,-x,-x; 0,0,0
+ => SYMM( 33): -z,-x,-y                          Symbol: -3+ x,x,x; 0,0,0
+ => SYMM( 34): z,-x,y                            Symbol: -3- x,x,-x; 0,0,0
+ => SYMM( 35): z,x,-y                            Symbol: -3+ x,-x,-x; 0,0,0
+ => SYMM( 36): -z,x,y                            Symbol: -3- x,-x,x; 0,0,0
+ => SYMM( 37): -y,-x,-z                          Symbol: 2 x,-x,0
+ => SYMM( 38): y,-x,z                            Symbol: 4- 0,0,z
+ => SYMM( 39): -y,x,z                            Symbol: 4+ 0,0,z
+ => SYMM( 40): y,x,-z                            Symbol: 2 x,x,0
+ => SYMM( 41): -z,-y,-x                          Symbol: 2 x,0,-x
+ => SYMM( 42): z,y,-x                            Symbol: 4+ 0,y,0
+ => SYMM( 43): z,-y,x                            Symbol: 2 x,0,x
+ => SYMM( 44): -z,y,x                            Symbol: 4- 0,y,0
+ => SYMM( 45): -x,-z,-y                          Symbol: 2 0,y,-y
+ => SYMM( 46): -x,z,y                            Symbol: 2 0,y,y
+ => SYMM( 47): x,z,-y                            Symbol: 4- x,0,0
+ => SYMM( 48): x,-z,y                            Symbol: 4+ x,0,0
+
+ => Special Wyckoff Positions for P m -3 m
+ 
+    Multp     Site        Representative Coordinates (centring translations excluded)
+     24       m              x,x,z               x,-x,-z             -x,x,-z                                 
+                             -x,-x,z             x,z,x               -x,-z,x                                 
+                             x,-z,-x             -x,z,-x             z,x,x                                   
+                             -z,x,-x             -z,-x,x             z,-x,-x                                 
+                             -x,-x,-z            -x,x,z              x,-x,z                                  
+                             x,x,-z              -x,-z,-x            x,z,-x                                  
+                             -x,z,x              x,-z,x              -z,-x,-x                                
+                             z,-x,x              z,x,-x              -z,x,x                                  
+ 
+     24       l              1/2,y,z             1/2,-y,-z           1/2,y,-z                                
+                             1/2,-y,z            y,z,1/2             -y,-z,1/2                               
+                             y,-z,1/2            -y,z,1/2            z,1/2,y                                 
+                             -z,1/2,-y           -z,1/2,y            z,1/2,-y                                
+                             y,1/2,z             -y,1/2,-z           y,1/2,-z                                
+                             -y,1/2,z            z,y,1/2             -z,-y,1/2                               
+                             -z,y,1/2            z,-y,1/2            1/2,z,y                                 
+                             1/2,-z,-y           1/2,-z,y            1/2,z,-y                                
+ 
+     24       k              0,y,z               0,-y,-z             0,y,-z                                  
+                             0,-y,z              y,z,0               -y,-z,0                                 
+                             y,-z,0              -y,z,0              z,0,y                                   
+                             -z,0,-y             -z,0,y              z,0,-y                                  
+                             y,0,z               -y,0,-z             y,0,-z                                  
+                             -y,0,z              z,y,0               -z,-y,0                                 
+                             -z,y,0              z,-y,0              0,z,y                                   
+                             0,-z,-y             0,-z,y              0,z,-y                                  
+ 
+     12       j              1/2,y,y             1/2,-y,-y           1/2,y,-y                                
+                             1/2,-y,y            y,y,1/2             -y,-y,1/2                               
+                             y,-y,1/2            -y,y,1/2            y,1/2,y                                 
+                             -y,1/2,-y           -y,1/2,y            y,1/2,-y                                
+ 
+     12       i              0,y,y               0,-y,-y             0,y,-y                                  
+                             0,-y,y              y,y,0               -y,-y,0                                 
+                             y,-y,0              -y,y,0              y,0,y                                   
+                             -y,0,-y             -y,0,y              y,0,-y                                  
+ 
+     12       h              x,1/2,0             -x,1/2,0            1/2,0,x                                 
+                             1/2,0,-x            0,x,1/2             0,-x,1/2                                
+                             1/2,x,0             1/2,-x,0            0,1/2,x                                 
+                             0,1/2,-x            x,0,1/2             -x,0,1/2                                
+ 
+      8       g              x,x,x               x,-x,-x             -x,x,-x                                 
+                             -x,-x,x             -x,-x,-x            -x,x,x                                  
+                             x,-x,x              x,x,-x                                                      
+ 
+      6       f              x,1/2,1/2           -x,1/2,1/2          1/2,1/2,x                               
+                             1/2,1/2,-x          1/2,x,1/2           1/2,-x,1/2                              
+ 
+      6       e              x,0,0               -x,0,0              0,0,x                                   
+                             0,0,-x              0,x,0               0,-x,0                                  
+ 
+      3       d              1/2,0,0             0,0,1/2             0,1/2,0                                 
+ 
+      3       c              0,1/2,1/2           1/2,1/2,0           1/2,0,1/2                               
+ 
+      1       b              1/2,1/2,1/2                                                                     
+ 
+      1       a              0,0,0                                                                           
+ 
+
+       -------------------------------------------------
+       INFORMATION ON SITE SYMMETRY OF ATOMS IN PHASE: 1
+       -------------------------------------------------
+
+
+  -> Information on Atom: La     at position:    0.00000   0.00000   0.00000  Multiplicity:   1
+     List of symmetry operators and symmetry elements of the site point group:
+     Operator  2:  x,-y,-z                       2 x,0,0   
+     Operator  3:  -x,y,-z                       2 0,y,0   
+     Operator  4:  -x,-y,z                       2 0,0,z   
+     Operator  5:  y,z,x                         3- x,x,x  
+     Operator  6:  -y,-z,x                       3+ x,-x,x 
+     Operator  7:  y,-z,-x                       3+ x,x,-x 
+     Operator  8:  -y,z,-x                       3- x,-x,-x
+     Operator  9:  z,x,y                         3+ x,x,x  
+     Operator 10:  -z,x,-y                       3- x,x,-x 
+     Operator 11:  -z,-x,y                       3+ x,-x,-x
+     Operator 12:  z,-x,-y                       3- x,-x,x 
+     Operator 13:  y,x,z                         m x,x,z   
+     Operator 14:  -y,x,-z                       -4- 0,0,z; 0,0,0
+     Operator 15:  y,-x,-z                       -4+ 0,0,z; 0,0,0
+     Operator 16:  -y,-x,z                       m x,-x,z  
+     Operator 17:  z,y,x                         m x,y,x   
+     Operator 18:  -z,-y,x                       -4+ 0,y,0; 0,0,0
+     Operator 19:  -z,y,-x                       m x,y,-x  
+     Operator 20:  z,-y,-x                       -4- 0,y,0; 0,0,0
+     Operator 21:  x,z,y                         m x,y,y   
+     Operator 22:  x,-z,-y                       m x,y,-y  
+     Operator 23:  -x,-z,y                       -4- x,0,0; 0,0,0
+     Operator 24:  -x,z,-y                       -4+ x,0,0; 0,0,0
+     Operator 25:  -x,-y,-z                      -1 0,0,0  
+     Operator 26:  -x,y,z                        m 0,y,z   
+     Operator 27:  x,-y,z                        m x,0,z   
+     Operator 28:  x,y,-z                        m x,y,0   
+     Operator 29:  -y,-z,-x                      -3- x,x,x; 0,0,0
+     Operator 30:  y,z,-x                        -3+ x,-x,x; 0,0,0
+     Operator 31:  -y,z,x                        -3+ x,x,-x; 0,0,0
+     Operator 32:  y,-z,x                        -3- x,-x,-x; 0,0,0
+     Operator 33:  -z,-x,-y                      -3+ x,x,x; 0,0,0
+     Operator 34:  z,-x,y                        -3- x,x,-x; 0,0,0
+     Operator 35:  z,x,-y                        -3+ x,-x,-x; 0,0,0
+     Operator 36:  -z,x,y                        -3- x,-x,x; 0,0,0
+     Operator 37:  -y,-x,-z                      2 x,-x,0  
+     Operator 38:  y,-x,z                        4- 0,0,z  
+     Operator 39:  -y,x,z                        4+ 0,0,z  
+     Operator 40:  y,x,-z                        2 x,x,0   
+     Operator 41:  -z,-y,-x                      2 x,0,-x  
+     Operator 42:  z,y,-x                        4+ 0,y,0  
+     Operator 43:  z,-y,x                        2 x,0,x   
+     Operator 44:  -z,y,x                        4- 0,y,0  
+     Operator 45:  -x,-z,-y                      2 0,y,-y  
+     Operator 46:  -x,z,y                        2 0,y,y   
+     Operator 47:  x,z,-y                        4- x,0,0  
+     Operator 48:  x,-z,y                        4+ x,0,0  
+     Codes for atom coordinates  (Automatic Constraints):        0.00        0.00        0.00
+     Codes for anisotropic betas (Automatic Constraints):        0.00        0.00        0.00        0.00        0.00        0.00
+
+     --> Complete orbit of the atom: La    
+
+         La(  1)     0.00000  0.00000  0.00000    x,y,z
+
+  -> Information on Atom: Ba     at position:    0.00000   0.00000   0.00000  Multiplicity:   1
+     List of symmetry operators and symmetry elements of the site point group:
+     Operator  2:  x,-y,-z                       2 x,0,0   
+     Operator  3:  -x,y,-z                       2 0,y,0   
+     Operator  4:  -x,-y,z                       2 0,0,z   
+     Operator  5:  y,z,x                         3- x,x,x  
+     Operator  6:  -y,-z,x                       3+ x,-x,x 
+     Operator  7:  y,-z,-x                       3+ x,x,-x 
+     Operator  8:  -y,z,-x                       3- x,-x,-x
+     Operator  9:  z,x,y                         3+ x,x,x  
+     Operator 10:  -z,x,-y                       3- x,x,-x 
+     Operator 11:  -z,-x,y                       3+ x,-x,-x
+     Operator 12:  z,-x,-y                       3- x,-x,x 
+     Operator 13:  y,x,z                         m x,x,z   
+     Operator 14:  -y,x,-z                       -4- 0,0,z; 0,0,0
+     Operator 15:  y,-x,-z                       -4+ 0,0,z; 0,0,0
+     Operator 16:  -y,-x,z                       m x,-x,z  
+     Operator 17:  z,y,x                         m x,y,x   
+     Operator 18:  -z,-y,x                       -4+ 0,y,0; 0,0,0
+     Operator 19:  -z,y,-x                       m x,y,-x  
+     Operator 20:  z,-y,-x                       -4- 0,y,0; 0,0,0
+     Operator 21:  x,z,y                         m x,y,y   
+     Operator 22:  x,-z,-y                       m x,y,-y  
+     Operator 23:  -x,-z,y                       -4- x,0,0; 0,0,0
+     Operator 24:  -x,z,-y                       -4+ x,0,0; 0,0,0
+     Operator 25:  -x,-y,-z                      -1 0,0,0  
+     Operator 26:  -x,y,z                        m 0,y,z   
+     Operator 27:  x,-y,z                        m x,0,z   
+     Operator 28:  x,y,-z                        m x,y,0   
+     Operator 29:  -y,-z,-x                      -3- x,x,x; 0,0,0
+     Operator 30:  y,z,-x                        -3+ x,-x,x; 0,0,0
+     Operator 31:  -y,z,x                        -3+ x,x,-x; 0,0,0
+     Operator 32:  y,-z,x                        -3- x,-x,-x; 0,0,0
+     Operator 33:  -z,-x,-y                      -3+ x,x,x; 0,0,0
+     Operator 34:  z,-x,y                        -3- x,x,-x; 0,0,0
+     Operator 35:  z,x,-y                        -3+ x,-x,-x; 0,0,0
+     Operator 36:  -z,x,y                        -3- x,-x,x; 0,0,0
+     Operator 37:  -y,-x,-z                      2 x,-x,0  
+     Operator 38:  y,-x,z                        4- 0,0,z  
+     Operator 39:  -y,x,z                        4+ 0,0,z  
+     Operator 40:  y,x,-z                        2 x,x,0   
+     Operator 41:  -z,-y,-x                      2 x,0,-x  
+     Operator 42:  z,y,-x                        4+ 0,y,0  
+     Operator 43:  z,-y,x                        2 x,0,x   
+     Operator 44:  -z,y,x                        4- 0,y,0  
+     Operator 45:  -x,-z,-y                      2 0,y,-y  
+     Operator 46:  -x,z,y                        2 0,y,y   
+     Operator 47:  x,z,-y                        4- x,0,0  
+     Operator 48:  x,-z,y                        4+ x,0,0  
+     Codes for atom coordinates  (Automatic Constraints):        0.00        0.00        0.00
+     Codes for anisotropic betas (Automatic Constraints):        0.00        0.00        0.00        0.00        0.00        0.00
+
+     --> Complete orbit of the atom: Ba    
+
+         Ba(  1)     0.00000  0.00000  0.00000    x,y,z
+
+  -> Information on Atom: Co     at position:    0.50000   0.50000   0.50000  Multiplicity:   1
+     List of symmetry operators and symmetry elements of the site point group:
+     Operator  2:  y,z,x                         3- x,x,x  
+     Operator  3:  z,x,y                         3+ x,x,x  
+     Operator  4:  y,x,z                         m x,x,z   
+     Operator  5:  z,y,x                         m x,y,x   
+     Operator  6:  x,z,y                         m x,y,y   
+     Operator  7:  x,y,-z+1                      m x,y,1/2 
+     Operator  8:  y,z,-x+1                      -3+ x,-x+1,x; 1/2,1/2,1/2
+     Operator  9:  z,x,-y+1                      -3+ x,-x+1,-x+1; 1/2,1/2,1/2
+     Operator 10:  y,x,-z+1                      2 x,x,1/2 
+     Operator 11:  z,y,-x+1                      4+ 1/2,y,1/2
+     Operator 12:  x,z,-y+1                      4- x,1/2,1/2
+     Operator 13:  x,-y+1,z                      m x,1/2,z 
+     Operator 14:  y,-z+1,x                      -3- x,-x+1,-x+1; 1/2,1/2,1/2
+     Operator 15:  z,-x+1,y                      -3- x,x,-x+1; 1/2,1/2,1/2
+     Operator 16:  y,-x+1,z                      4- 1/2,1/2,z
+     Operator 17:  z,-y+1,x                      2 x,1/2,x 
+     Operator 18:  x,-z+1,y                      4+ x,1/2,1/2
+     Operator 19:  x,-y+1,-z+1                   2 x,1/2,1/2
+     Operator 20:  y,-z+1,-x+1                   3+ x,x,-x+1
+     Operator 21:  z,-x+1,-y+1                   3- x,-x+1,x
+     Operator 22:  y,-x+1,-z+1                   -4+ 1/2,1/2,z; 1/2,1/2,1/2
+     Operator 23:  z,-y+1,-x+1                   -4- 1/2,y,1/2; 1/2,1/2,1/2
+     Operator 24:  x,-z+1,-y+1                   m x,y,-y+1
+     Operator 25:  -x+1,y,z                      m 1/2,y,z 
+     Operator 26:  -y+1,z,x                      -3+ x,x,-x+1; 1/2,1/2,1/2
+     Operator 27:  -z+1,x,y                      -3- x,-x+1,x; 1/2,1/2,1/2
+     Operator 28:  -y+1,x,z                      4+ 1/2,1/2,z
+     Operator 29:  -z+1,y,x                      4- 1/2,y,1/2
+     Operator 30:  -x+1,z,y                      2 1/2,y,y 
+     Operator 31:  -x+1,y,-z+1                   2 1/2,y,1/2
+     Operator 32:  -y+1,z,-x+1                   3- x,-x+1,-x+1
+     Operator 33:  -z+1,x,-y+1                   3- x,x,-x+1
+     Operator 34:  -y+1,x,-z+1                   -4- 1/2,1/2,z; 1/2,1/2,1/2
+     Operator 35:  -z+1,y,-x+1                   m x,y,-x+1
+     Operator 36:  -x+1,z,-y+1                   -4+ x,1/2,1/2; 1/2,1/2,1/2
+     Operator 37:  -x+1,-y+1,z                   2 1/2,1/2,z
+     Operator 38:  -y+1,-z+1,x                   3+ x,-x+1,x
+     Operator 39:  -z+1,-x+1,y                   3+ x,-x+1,-x+1
+     Operator 40:  -y+1,-x+1,z                   m x,-x+1,z
+     Operator 41:  -z+1,-y+1,x                   -4+ 1/2,y,1/2; 1/2,1/2,1/2
+     Operator 42:  -x+1,-z+1,y                   -4- x,1/2,1/2; 1/2,1/2,1/2
+     Operator 43:  -x+1,-y+1,-z+1                -1 1/2,1/2,1/2
+     Operator 44:  -y+1,-z+1,-x+1                -3- x,x,x; 1/2,1/2,1/2
+     Operator 45:  -z+1,-x+1,-y+1                -3+ x,x,x; 1/2,1/2,1/2
+     Operator 46:  -y+1,-x+1,-z+1                2 x,-x+1,1/2
+     Operator 47:  -z+1,-y+1,-x+1                2 x,1/2,-x+1
+     Operator 48:  -x+1,-z+1,-y+1                2 1/2,y,-y+1
+     Codes for atom coordinates  (Automatic Constraints):        0.00        0.00        0.00
+     Codes for anisotropic betas (Automatic Constraints):        0.00        0.00        0.00        0.00        0.00        0.00
+
+     --> Complete orbit of the atom: Co    
+
+         Co(  1)     0.50000  0.50000  0.50000    x,y,z
